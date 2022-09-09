@@ -1,0 +1,32 @@
+commit \ > https://git-scm.com/docs/pretty-formats
+		https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#:~:text=By%20default%2C%20with%20no%20arguments,written%2C%20and%20the%20commit%20message.
+
+%H -> commit hash
+-n5 -> number of lines
+
+touch -t 202206012047 test0
+touch -t 202206012146 test1
+
+Xargs - remove arguments -> https://www.thegeekstuff.com/2013/12/xargs-examples/
+
+chmod -h 777 test6
+
+Ln -> symbolic link -> https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
+
+ssh-keygen -t rsa
+
+vim ~/.vimrc -> :set number
+
+uninstall_oh_my_zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+
+https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
+
+awk '{print $1 - 2}' > so you need subtract 2 from the result
+
+Ex06 shel1 -> https://stackoverflow.com/questions/2560411/how-to-remove-every-other-line-with-sed
