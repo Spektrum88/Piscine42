@@ -1,1 +1,0 @@
-			printf("-> 1 true -> 0 false = [ %d ]\n", ft_str_is_alpha("ajhahakh"));
