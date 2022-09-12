@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 12:08:03 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/12 12:46:50 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/12 15:47:09 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/12 17:19:32 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (str[i] != '\0')
-	i++;
-	return (i);
+int	ft_putnbr(int nb)
+{
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	ft_putchar((nb % 10) + '0');
+	return (nb);
 }
 /*
 int main()
 {
-	char *str = "12345";
-	printf("[ %s ] have a length of [ %d ]", str, ft_strlen(str));
+	ft_putnbr(42);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:23:51 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/08 21:47:46 by amealha-         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:17:48 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 return (*s1 -*s2);
 }
+
 int main()
 {
 	char str1[] = "1st string"; 
 	char str2[] = "2st string"; 
 	char str3[] = "1st string";
- 	printf("%s\n %s ", ft_strncmp(str1, str2) 3);
+ 	printf("%s\n %s\n %d ", ft_strncmp(str1, str2) 3);
 }
 
