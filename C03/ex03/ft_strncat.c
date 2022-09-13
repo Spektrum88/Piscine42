@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:23:51 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/13 12:01:23 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/13 12:21:23 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/13 15:40:46 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
+	j = 0;
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	while (dest[i] != '\0')
+		i++;
+	while (j < nb)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		++i;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	if (i != n)
-		return (s1[i] - s2[i]);
-	return (0);
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
 int main()
 {
-	char str1[] = "5st string"; 
-	char str2[] = "ast string"; 
-	char str3[] = "1st string";
- 	printf("%d\n \n", ft_strncmp(str1, str2, 1));
-}
-*/
+	char src[] = "__Copy__";
+	char dest[] = "Originl";
+	ft_strncat(dest, src, 5);
+	printf("%s Final strint", dest);
+	return (0);
+}*/

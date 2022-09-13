@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:23:51 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/13 12:01:23 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/13 12:09:16 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/13 17:14:18 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		++i;
+		i++;
 	}
-	if (i != n)
-		return (s1[i] - s2[i]);
-	return (0);
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
 int main()
 {
-	char str1[] = "5st string"; 
-	char str2[] = "ast string"; 
-	char str3[] = "1st string";
- 	printf("%d\n \n", ft_strncmp(str1, str2, 1));
-}
-*/
+	char a[50] = "experience";
+	char b[50] = "number 1";
+	
+	ft_strcat(a, b);
+	
+	printf("Final destination : [ %s ]\n", a);
+	return (0);
+}*/
