@@ -12,12 +12,14 @@ int	ft_atoi(char *str)
 	sum = 0;
 	sign = 1;
 	found = 1;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f' || *str == '\r')
+	while (*str == 32 || (*str >= 9 && *str <= 13 || *str == '-' || *str == '+'))
+	{
+		if (*str == '-')
+		{
+			sign *= -1;
+		}
 		str++;
-	if (*str == '-')
-		sign = -1;
-	if (*str == '-' || *str == '+')
-		str++;
+	}
 	while (*str && found)
 	{
 		if (*str >= '0' && *str <= '9')
@@ -31,7 +33,7 @@ int	ft_atoi(char *str)
 
 int main(void)
 {
-	char *s = "#";
-	printf("%d %d", ft_atoi(s), atoi(s));
+	char *s = " --2020";
+	printf("%d ", ft_atoi(s));
 	return (0);
 }

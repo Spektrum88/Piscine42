@@ -6,7 +6,7 @@
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:34:02 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/13 17:13:32 by amealha-         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:22:58 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int main()
 the printing and typesetting industry.";
 	char b[] = "text";
 	char c[] = "nothing";
-	printf("\nOriginal test -> [ %s ]\n\nChars to 
-shearch [ %s ]\n\nString found -> [ %s ]\n", a, b, ft_strstr(a, b));
-	printf("\nOriginal test -> [ %s ]\n\nChars to 
-shearch [ %s ]\n\nString found -> [ %s ]\n", a, c, ft_strstr(a, c));
+	printf("\nOriginal test -> [ %s ]\n\nsearch [ %s ]\n\nString found ->
+ [ %s ]\n", a, b, ft_strstr(a, b));
+	printf("\nOriginal test -> [ %s ]\n\nsearch [ %s ]\n\nString found ->
+ [ %s ]\n", a, c, ft_strstr(a, c));
 
 }*/

@@ -6,35 +6,39 @@
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:21:23 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/13 15:40:46 by amealha-         ###   ########.fr       */
+/*   Updated: 2022/09/14 12:05:39 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
-	j = 0;
 	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (j < nb)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
+	j = 0;
+	while (dest[j] != '\0')
+	j++;
+	while (src[i] != '\0' && i < nb)
+	{	
+		dest[j + i] = src[i];
+	i++;
 	}
-	dest[i] = '\0';
+	dest[j + i] = '\0';
 	return (dest);
 }
 /*
 #include <stdio.h>
+#include <strings.h>
 int main()
 {
-	char src[] = "__Copy__";
-	char dest[] = "Originl";
+	char src[50] = "__Copy__";
+	char dest[50] = "";
+	char src1[50] = "__Copy__";
+	char dest2[50] = "";
 	ft_strncat(dest, src, 5);
-	printf("%s Final strint", dest);
+	printf("Final strint [ %s ]\n", dest);
+	strncat(dest2, src1, 5);
+	printf("STRNCAT [ %s ]\n", dest2);
 	return (0);
 }*/
