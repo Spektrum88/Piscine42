@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   putstr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:22:17 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/15 21:25:32 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/15 20:35:41 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/15 21:05:56 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_strlen(char *str)
+void putstr(char *str)
 {
-	int 	i;
+	int	i;
 	
 	i = 0;
-	while (*str++)
-	{
+	while (str[i] != 0x00 )
 		i++;
-	}
-	return (i);
-
+		write(1, str, i);
 }
-int main(int ac, char **av)
+int main(void)
 {
-	int sizelen;
-	
-	if (ac == 2)
-	{
-		sizelen  = ft_strlen(av[1]);
-		while (sizelen--)
-		{
-			write(1, &av[1][sizelen], 1);
-		}
-		write(1, "\n", 1);
-		return (0);
-	}
+	putstr("andreeeee\n");
+	return (0);
 }
-

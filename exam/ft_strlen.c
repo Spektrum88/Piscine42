@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:22:17 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/15 21:25:32 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/16 10:38:55 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/16 10:40:46 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
 int ft_strlen(char *str)
 {
-	int 	i;
-	
-	i = 0;
-	while (*str++)
-	{
-		i++;
-	}
-	return (i);
+    int i;
 
+    i = 0;
+    while(str[i] != '\0')
+    {
+        i++;
+    }
+    return (i);
 }
-int main(int ac, char **av)
+int main()
 {
-	int sizelen;
-	
-	if (ac == 2)
-	{
-		sizelen  = ft_strlen(av[1]);
-		while (sizelen--)
-		{
-			write(1, &av[1][sizelen], 1);
-		}
-		write(1, "\n", 1);
-		return (0);
-	}
+    char a[]= "O comprimento desta frase!";
+    printf("%s -> [ %d ]\n", a, ft_strlen(a));
+    return(0);
 }
-

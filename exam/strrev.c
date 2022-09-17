@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   strrev.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:22:17 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/15 21:25:32 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/15 20:14:30 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/15 20:32:47 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-int ft_strlen(char *str)
-{
-	int 	i;
+#include <stdio.h>
+char *ft_strrev(char *str)
+{	
+	int size;
+	int	i;
+	char c;
 	
 	i = 0;
-	while (*str++)
+	size = 0;
+	while (str[size] != '\0')
 	{
+		size++;
+	}
+	size--;
+	while ( size > i)
+	{	
+		c = str[size];
+		str[size] = str[i];
+		str[i] = c;
 		i++;
+		size--;
 	}
-	return (i);
+	return(str);
 
 }
-int main(int ac, char **av)
+int main()
 {
-	int sizelen;
-	
-	if (ac == 2)
-	{
-		sizelen  = ft_strlen(av[1]);
-		while (sizelen--)
-		{
-			write(1, &av[1][sizelen], 1);
-		}
-		write(1, "\n", 1);
-		return (0);
-	}
+  	char a[] = "andre Soares";
+  	char b[] = "seraoS erdna";
+	printf("%s", ft_strrev(a));
+	printf("\n");
+	printf("%s\n", ft_strrev(b));
+	return (0);
 }
-
