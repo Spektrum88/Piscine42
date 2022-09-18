@@ -19,6 +19,8 @@ ssh-keygen -t rsa
 
 vim ~/.vimrc -> :set number
 
+Instal zsh -> sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 uninstall_oh_my_zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -30,3 +32,10 @@ https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-
 awk '{print $1 - 2}' > so you need subtract 2 from the result
 
 Ex06 shel1 -> https://stackoverflow.com/questions/2560411/how-to-remove-every-other-line-with-sed
+
+vim .zshrc -> alias gca="gcc -Wall -Wextra -Werror"
+vim .vimrc
+
+Change passphrase -> ssh-keygen -p
+
+vim -p */*.c -> open multiple vim window
