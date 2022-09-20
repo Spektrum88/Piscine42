@@ -29,9 +29,9 @@ int main(void)
 	ft_print_alphabet();
 	return(0);	
 //ex02
-int	main(){
+
 	ft_print_reverse_alphabet();
-}
+
 //ex03
 
 //ex04
