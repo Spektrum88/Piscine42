@@ -6,7 +6,7 @@
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:28:32 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/09 15:10:26 by amealha-         ###   ########.fr       */
+/*   Updated: 2022/09/20 20:58:27 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void cond(int n)
 {
 
 	if(n >  0)
-		write(1, "positif" , 10);	
+		write(1, "positif" , 7);	
 	else if (n == 0)
 		write(1,"neutro", 6);
 	else
@@ -27,6 +27,6 @@ void cond(int n)
 }
 int main()
 {
-	cond(0);
+	cond(5);
 	return(0);
 }
