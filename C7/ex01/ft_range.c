@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 20:34:10 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/22 19:06:04 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/22 19:06:46 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/22 19:35:27 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+int	*ft_range(int min, int max)
 {
-	char	*p;
-	int		i;
+	int	*p;
+	int	i;
 
+	if (min >= max)
+		return (0);
+	p = malloc((max - min) * sizeof(int));
+	if (p == 0)
+		return (0);
 	i = 0;
-	while (src[i])
+	while (i < (max - min))
 	{
+		p[i] = min + i;
 		i++;
 	}
-	p = (char *)malloc(sizeof(char) * (i + 1));
-	if (p == NULL)
-	{
-		return (NULL);
-	}
-	i = -1;
-	while (src[++i])
-	{
-		p[i] = src[i];
-	}
-	p[i] = 0x00;
 	return (p);
 }
 
@@ -40,13 +35,21 @@ char	*ft_strdup(char *src)
 #include <string.h>
 int main(int ac,char **av )
 {
-	char *m;
-	char *t;
-	if (ac == 2)
+	int *t;
+	int min;
+	int max;
+	int i;
+	int  size;
+	
+	min = 15;
+	max = 100;
+	i = 0;
+	size = max - min;
+	t = ft_range(min, max);
+	while (i < size)
 	{
-		m = ft_strdup(av[1]);
-		t = strdup(av[1]);
-		printf(":%s:\n:%s:\n", m, t); 
+		printf("%d\n", t[i]);
+		i++;
 	}
 	return (0);
 }*/
