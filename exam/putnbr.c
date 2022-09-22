@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainc0.c                                           :+:      :+:    :+:   */
+/*   putnbr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 10:29:41 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/19 15:45:22 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/22 15:34:52 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/22 15:50:51 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
-//C00
-void ft_putchar(char c);
-void ft_print_alphabet(void);
-int main()
+
+void ft_putchar(char c)
 {
-//ex00
+	write (1, &c, 1);
+}
+void ft_putnbr(int n);
+{
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar('-');
+	}
+	if (n >= 10)
+		ft_putnbr(n /10);
+		ft_putchar((n % 10) + '0');
 
-	ft_putchar('A');
-	ft_putchar(' ');
-	ft_putchar('\n');
-//ex01
-	ft_print_alphabet();
-	return(0);
-}	
-//ex02
-
+}
 

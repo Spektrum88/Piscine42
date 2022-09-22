@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainc0.c                                           :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amealha- <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 10:29:41 by amealha-          #+#    #+#             */
-/*   Updated: 2022/09/19 15:45:22 by amealha-         ###   ########.fr       */
+/*   Created: 2022/09/18 16:18:44 by amealha-          #+#    #+#             */
+/*   Updated: 2022/09/20 16:18:23 by amealha-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-//C00
-void ft_putchar(char c);
-void ft_print_alphabet(void);
-int main()
+int	ft_iterative_factorial(int nb)
 {
-//ex00
+	int	factorial;
+	int	i;	
 
-	ft_putchar('A');
-	ft_putchar(' ');
-	ft_putchar('\n');
-//ex01
-	ft_print_alphabet();
-	return(0);
-}	
-//ex02
+	factorial = 1;
+	i = 1;
+	if (nb >= 0)
+	{	
+		while (i <= nb)
+		{
+			factorial *= i;
+			i++;
+		}
+		return (factorial);
+	}
+	return (0);
+	
+}
 
+/*#include <stdio.h>
 
+int	main()
+{	
+	 int n;
+	
+	n = 12;
+	printf("Factorial of -> [ %d ] is [ %d ]\n", n, ft_iterative_factorial(n));
+	return (0);  	
+}*/
