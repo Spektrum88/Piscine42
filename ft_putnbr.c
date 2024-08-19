@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
 
 void	ft_putchar(char c)
 {
