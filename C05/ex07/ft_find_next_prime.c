@@ -30,15 +30,14 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-
-    while (ft_is_prime(nb) == 0)
-    {
-        ft_is_prime(nb);
-        nb++;
-    }
-    return (nb);
+	while (ft_is_prime(nb) == 0)
+	{
+		ft_is_prime(nb);
+		nb++;
+	}
+	return (nb);
 }
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -155,4 +154,4 @@ int	main()
     printf("%d -> %d\n", 334329, ft_find_next_prime(334329));
     printf("%d -> %d\n", 184829, ft_find_next_prime(184829));
 	return (0);
-}
+}*/

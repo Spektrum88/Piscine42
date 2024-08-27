@@ -18,12 +18,12 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	while (str[i] != 0x00)
-	i++;
+		i++;
 	write(1, str, i);
 }
 
 int	main(int argc, char **argv)
-{	
+{
 	int	i;
 
 	i = 1;
@@ -33,8 +33,8 @@ int	main(int argc, char **argv)
 		{
 			ft_putstr(argv[i]);
 			ft_putstr("\n");
-		i++;
-		}		
+			i++;
+		}
 	}
 	return (0);
 }
